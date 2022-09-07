@@ -15,7 +15,6 @@ namespace M6L1BooksAuthors.Core.Services
         {
             try
             {
-                Console.WriteLine(dir);
                 var books = JsonConvert.DeserializeObject<List<Book>>(File.ReadAllText(dir + "books.json"));
                 int Id = new Random().Next(1, 1000);
                 Book newBook = new Book { BookId = Id, Description = product.Description, ReleaseYear = product.ReleaseYear, Title = product.Title };
